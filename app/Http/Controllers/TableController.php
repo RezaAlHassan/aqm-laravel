@@ -144,7 +144,7 @@ class TableController extends Controller
         $getLatestKhulna=Dashboard::where('district','Khulna')->latest()->first();
         $getLatestChittagong=Dashboard::where('district','Chittagong')->latest()->first();
 
-        
+
        
         return view('index', compact(  'getLatestDhaka', 'getLatestRajshahi', 
         'getLatestRangpur', 'getLatestSylhet', 'getLatestBarishal', 'getLatestKhulna', 'getLatestChittagong',

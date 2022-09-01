@@ -37,6 +37,25 @@ a:hover {
   text-decoration: none;
   color: #ff00cc; }
 
+.title-header{
+  color:#ff00cc;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight:bolder ;
+  font-size: 70px;
+}
+
+.sub-header{
+  font-family:Georgia ;
+  font-weight:bolder ;
+  font-size: 35px;
+
+}
+
+.paragraph-text{
+  font-family:Garamond ;
+  font-size: 25px;
+}
+
 img {
   max-width: 100%; }
 
@@ -112,6 +131,14 @@ section {
     top:20px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+  }
+
+  .b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
   }
 
 

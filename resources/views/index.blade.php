@@ -1,10 +1,12 @@
+
+<?php include('C:\xampp\htdocs\aqm\resources\views\overview.php'); ?>
+<?php include('C:\xampp\htdocs\aqm\resources\views\count.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!--
-     - Roxy: Bootstrap template by GettTemplates.com
-     - https://gettemplates.co/roxy
+     - different shapes like bubbles conatining info
+     - feature to include no of visits to sites 
     -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,13 +49,18 @@
 
 
         </div>
+
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_izy5ndvp.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px;"  loop  autoplay></lottie-player>
     </nav>
+    
 
     <div class="jumbotron d-flex align-items-center">
         <div class="container text-center">
             <h2 id="subtitle" class="display-1 mb-4">AQM measures air quality in real time for all districts in
-                Bangladesh</h1>
+               <b> Bangladesh</b></h1>
         </div>
+        
 
         <div class="circle-1"></div>
         <div class="circle-2"></div>
@@ -204,18 +211,42 @@
         <!-- End of Features Section-->
 
         <section id="page3">
+            
+            <div class="b-example-divider"></div>
+  <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-lg-5 py-5">
             <div class="container" data-aos="fade-up">
 
-
-                <div id="overviewTop" class="container p-3 my-3 text-white">
+                <div id="overviewTop"                 <?php
+                if ($aqi->aqi <=50){
+                    echo ' style="background: #024213;"';
+                }
+                elseif($aqi->aqi <=100){
+                    echo ' style="background: #917117;"';
+                }
+                elseif($aqi->aqi <=150){
+                    echo ' style="background: #733007;"';
+                }
+                elseif($aqi->aqi <=200){
+                    echo ' style="background: #9e1f0b;"';
+                }
+                elseif($aqi->aqi <=250){
+                    echo ' style="background: #2d07ed;"';
+                }
+                elseif($aqi->aqi <=300){
+                    echo ' style="background: #0a0000;"';
+                } 
+                ?> class="container p-3 my-3 text-white">
                     <div class="col">
                         <div class="row ">
-                            <h6>AQI:<span>165</span></h6>
+
+                            <h6 style="font-size:25px; font-weight:1000;">AQI:<span><?php
+                                echo $aqi->aqi?></span></h6>
                         </div>
 
                         <br>
                         <div class="row">
-                            <h4>Unhealthy</h4>
+                            <h4><?php  checkAQI($aqi) ?></h4>
                         </div>
                     </div>
                 </div>
@@ -224,25 +255,11 @@
                     <div class="col" id="overviewCont1">
 
                         <div class="row">
-                            <p id="overviewTitle">Overview </p>
+                            <p style="font-size:50px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Overview </p>
                         </div>
 
                         <div class="row">
-
-                            <h5 id="overviewLoc">Location: </h5>
-                            <!--/ dropdown -->
-                            <div id="locSelectorCont">
-                                <select id="selector">
-                                    <option value="bd-da">Dhaka</option>
-                                    <option value="bd-rj">Rajshahi </option>
-                                    <option value="bd-kh">Khulna</option>
-                                    <option value="bd-cg">Chittagong</option>
-                                    <option value="bd-rpr">Rangpur</option>
-                                    <option value="bd-sy">Sylhet</option>
-                                    <option value="bd-ba">Barisal</option>
-                                </select>
-                            </div>
-
+                            <h5  style=" font-size:30px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Location: <?php echo $district?></h5>
                         </div>
 
 
@@ -250,63 +267,69 @@
 
                     <div class="row overviewTable">
                         <!--/ overview table -->
-
-                        <div class="col colStyle ">
-                            <p class="tableHeadingText">Air Pollution Level </p>
-                            <p>Unhealthy </p>
-                        </div>
                         <div class="col colStyle ">
                             <p class="tableHeadingText">Air Quality Index </p>
-                            <p>135 </p>
+                            <p > <?php echo $aqi->aqi?> </p>
                         </div>
                         <div class="col colStyle ">
-                            <p class="tableHeadingText">Main pollutant </p>
-                            <p>PM2.5 </p>
+                            <p class="tableHeadingText">Temperature </p>
+                            <p ><?php echo $dashboard->temperature ."(*C)"?> </p>
+                        </div>
+                        <div class="col colStyle ">
+                            <p class="tableHeadingText">Rain Precipitation </p>
+                            <p ><?php echo $dashboard->rain?> </p>
+                        </div>
+                        <div class="col colStyle ">
+                            <p class="tableHeadingText">Windspeed </p>
+                            <p ><?php echo $dashboard->windspeed ."(km/h)"?> </p>
+                        </div>
+                        <div class="col colStyle ">
+                            <p class="tableHeadingText">Visibility</p>
+                            <p ><?php echo $dashboard->visbility?> </p>
+                        </div>
+                        <div class="col colStyle ">
+                            <p class="tableHeadingText">Cloud Cover</p>
+                            <p ><?php echo $dashboard->cloud?> </p>
+                        </div>
+                        <div class="col colStyle ">
+                            <p class="tableHeadingText">Relative Humidity</p>
+                            <p ><?php echo $dashboard->humidity ."%" ?> </p>
                         </div>
 
                     </div>
 
                 </div>
             </div>
-            <br><br><br><br><br>
-
-
-
-
+        </div>
+    </div>
+ 
         </section>
-        <section id="section-featurettes" class="featurettes">
 
-            <div class="container">
 
+        <div class="b-example-divider"></div>
+        <div class="section-content" data-aos="fade-up">
+        <div class="container col-xxl-8 px-8">
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3 title-header" > Map</h1>
+                <h5 class="display-5 fw-bold lh-1 mb-3 sub-header" > Daily AQI of All Districts</h1>
+                <p class="paragraph-text">The daily air quality index (AQI),  which represnts the quality of air incliding pollutants today, 
+                  is shown for all districts. The data is recorded daily, delivered to our database and processed into data which 
+                  can be shown in this chart.The level of air quality represented by each color is given in the legend. The authenticity of 
+                  the data is absolute as the data is retrieved from government sources. </p>
+              </div>
+           
+            <div class="col-10 col-sm-8 col-lg-6">
+                <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+                <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+                <div id="mapContainer"></div>
             </div>
-            <!--/ .container -->
 
-        </section> <!-- MAP Section-->
-        <section class="section-padding bg-fixed bg-white overlay">
-            <div id="map" class="container">
-                <div class="section-content" data-aos="fade-up">
-                    <div class="heading-section text-center">
-                        <h2 style="font-family:monospace; letter-spacing: -2px;">
-                            Map
-                        </h2><br>
-                        <h6 style="letter-spacing: -2px;">
-                            Today's AQI (Air Quality Index) among the many districts of bangladesh
-                        </h6>
-                    </div>
-                    <!-- Map -->
-
-                    <div class="d-flex justify-content-center align-items-center">
-
-                        <script src="https://code.highcharts.com/maps/highmaps.js"></script>
-                        <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
-
-                        <div id="mapContainer"></div>
-
-                    </div>
-                    <!-- End of Testimonial -->
-                </div>
-            </div>
-        </section>
+          </div>
+        </div>
+    </div>
+      
+        <div class="b-example-divider"></div>
         <!-- End of Testimonial Section-->
         <!-- Portfolio Section -->
         <section class="bg-white">
@@ -331,6 +354,7 @@
 
 
         </section>
+        <div class="b-example-divider"></div>
         <!-- End of Portfolio Section -->
         <!-- Client Section -->
         <section id="client">
@@ -362,7 +386,7 @@
         </section>
 
 
-
+        <div class="b-example-divider"></div>
 
         <section class="bg-white">
             <div id="dailyLC" class="container">
@@ -388,6 +412,7 @@
         </section>
         <!-- End of Client Section -->
         <!-- Reservation Section -->
+        <div class="b-example-divider"></div>
         <section id="boxPlot" class="bg-white section-content">
             <div class="Container">
                  <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -515,6 +540,7 @@
                             </a>
                         </nav>
                     </div>
+                    
 
                 </div>
             </div>
@@ -570,7 +596,7 @@
                     },
             
                     subtitle: {
-                        text: "Bangladesh",
+                        text: "",
                     },
             
                     colorAxis: {
@@ -579,25 +605,25 @@
                             {
                                 from: 0,
                                 to: 50,
-                                color: "#29c453",
+                                color: "#024213",
                                 name: "Good",
                             },
                             {
                                 from: 51,
                                 to: 100,
-                                color: "#edcb0c",
+                                color: "#917117",
                                 name: "Moderate",
                             },
                             {
                                 from: 101,
                                 to: 150,
-                                color: "#ff8103",
+                                color: "#733007",
                                 name: "Unhealthy For Sensitive Groups",
                             },
                             {
                                 from: 151,
                                 to: 200,
-                                color: "#82051c",
+                                color: "#9e1f0b",
                                 name: "Unhealthy ",
                             },
                             {

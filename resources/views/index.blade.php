@@ -315,7 +315,7 @@
                 <h5 class="display-5 fw-bold lh-1 mb-3 sub-header" > Daily AQI of All Districts</h1>
                 <p class="paragraph-text">The daily air quality index (AQI),  which represnts the quality of air incliding pollutants today, 
                   is shown for all districts. The data is recorded daily, delivered to our database and processed into data which 
-                  can be shown in this chart.The level of air quality represented by each color is given in the legend. The authenticity of 
+                  can be shown in this chart. The level of air quality represented by each color is given in the legend. The authenticity of 
                   the data is absolute as the data is retrieved from government sources. </p>
               </div>
            
@@ -328,88 +328,99 @@
           </div>
         </div>
     </div>
-      
-        <div class="b-example-divider"></div>
-        <!-- End of Testimonial Section-->
-        <!-- Portfolio Section -->
-        <section class="bg-white">
-            <div id="yearlyLC" class="container">
-                <script src="https://code.highcharts.com/highcharts.js"></script>
-                <script src="https://code.highcharts.com/modules/series-label.js"></script>
-                <script src="https://code.highcharts.com/modules/exporting.js"></script>
-                <script src="https://code.highcharts.com/modules/export-data.js"></script>
-                <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-                <div class="section-content" data-aos="fade-up">
-                    <div class="heading-section text-center">
-                        <h2 style="font-family:monospace; letter-spacing: -2px;">
-                            Yearly Line Chart
-                        </h2>
-                    </div>
 
-                    <figure class="highcharts-figure">
-                        <div id="chartContainerYearly"></div>
-                    </figure>
-                </div>
+    <div class="b-example-divider"></div>
+
+    <div class="section-content" data-aos="fade-up">
+        <div class="container col-xxl-10 px-8">
+          <div class="row align-items-center g-5 py-5 container-div">     
+               
+            <div class="col-lg-6 text-div align-content-sm-start" >
+                <h1 class="display-5 fw-bold lh-1 mb-3 title-header" > Yearly Line Chart</h1>
+                <h5 class="display-5 fw-bold lh-1 mb-3 sub-header" > Yearly Average Pollutant Districtwise</h1>
+                <p class="paragraph-text">The amount of main pollutant in Bangladesh, known as PM2.5, is collected for each day every year in the 
+                    seven districts of Bangladesh in the database. The data for each district, each year, is combined and averaged using SQL
+                    commands and query builder functions. So the data shows the yearly average data for each year for each district. The data is 
+                    then shown in the graph using a line graph, y axis being average PM2.5
+                    and x axis representing the years. </p>
+              </div>      
+           
+            <div class="col-10 col-sm-8 col-lg-6">
+                <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+                <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+                <figure class="highcharts-figure">
+                    <div id="chartContainerYearly"></div>
+                </figure>
             </div>
 
-
-        </section>
+          </div>
+        </div>
+    </div>
+      
         <div class="b-example-divider"></div>
         <!-- End of Portfolio Section -->
         <!-- Client Section -->
-        <section id="client">
-            <div id="barChart" class="container">
-                <div class="section-content" data-aos="fade-up">
+        <div class="section-content" data-aos="fade-up">
+            <div class="container col-xxl-8 px-8">
+              <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold lh-1 mb-3 title-header" > Bar Chart</h1>
+                    <h5 class="display-5 fw-bold lh-1 mb-3 sub-header" > Average Pollutant each Year</h1>
+                    <p class="paragraph-text">The amount of main pollutant in Bangladesh, known as PM2.5, is collected for each day every year in the 
+                        seven districts of Bangladesh in the database. The data for  each year is combined and averaged using SQL
+                        commands and query builder functions. So the data shows the yearly average data for each year for each district. The data is 
+                        then shown in the graph using a line graph where, y axis being average PM2.5
+                        and x axis representing the years. </p>
+                  </div>
+               
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <script src="https://code.highcharts.com/highcharts.js"></script>
+                    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
-                    <div class="col-md-12">
-                        <!-- Section Title -->
-                        <div class="title-wrap mb-5">
-                            <h2 style="font-family:monospace; letter-spacing: -2px;">
-                                Bar Chart
-                            </h2>
-                        </div>
-                        <!-- End of Section Title -->
-                        <script src="https://code.highcharts.com/highcharts.js"></script>
-                        <script src="https://code.highcharts.com/modules/exporting.js"></script>
-                        <script src="https://code.highcharts.com/modules/export-data.js"></script>
-                        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
-                        <figure class="highcharts-figure">
-                            <div id="barContainer"></div>
-
-                        </figure>
-
-                    </div>
-
-
+                    <figure class="highcharts-figure">
+                    <div id="barContainer"></div>
+                    </figure>
                 </div>
-        </section>
+    
+              </div>
+            </div>
+        </div>
 
 
         <div class="b-example-divider"></div>
 
-        <section class="bg-white">
-            <div id="dailyLC" class="container">
-                <script src="https://code.highcharts.com/highcharts.js"></script>
-                <script src="https://code.highcharts.com/modules/series-label.js"></script>
-                <script src="https://code.highcharts.com/modules/exporting.js"></script>
-                <script src="https://code.highcharts.com/modules/export-data.js"></script>
-                <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-                <div class="section-content" data-aos="fade-up">
-                    <div class="heading-section text-center">
-                        <h2 style="font-family:monospace; letter-spacing: -2px;">
-                            Daily Line Chart
-                        </h2>
-                    </div>
-
+        <div class="section-content" data-aos="fade-up">
+            <div class="container col-xxl-10 px-8">
+              <div class="row align-items-center g-5 py-5 container-div">     
+                   
+                <div class="col-lg-6 text-div align-content-sm-start" >
+                    <h1 class="display-5 fw-bold lh-1 mb-3 title-header" > Daily Line Chart</h1>
+                    <h5 class="display-5 fw-bold lh-1 mb-3 sub-header" > Daily Pollutant Districtwise</h1>
+                    <p class="paragraph-text">The amount of main pollutant in Bangladesh, known as PM2.5, is collected for each day every year in the 
+                        seven districts of Bangladesh in the database. The data for each district, each year, is combined and averaged using SQL
+                        commands and query builder functions. So the data shows the yearly average data for each year for each district. The data is 
+                        then shown in the graph using a line graph, y axis being average PM2.5
+                        and x axis representing the districts. </p>
+                  </div>      
+               
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <script src="https://code.highcharts.com/highcharts.js"></script>
+                    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+                    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
                     <figure class="highcharts-figure">
                         <div id="chartContainerDaily"></div>
                     </figure>
                 </div>
+    
+              </div>
             </div>
+        </div>
 
 
-        </section>
         <!-- End of Client Section -->
         <!-- Reservation Section -->
         <div class="b-example-divider"></div>
@@ -675,7 +686,7 @@
         text: "",
     },
     subtitle: {
-        text: "Average amount of pollutant PM2.5 in Bangladesh in recent years",
+        text: "",
     },
     xAxis: {
         accessibility: {
@@ -757,7 +768,7 @@ Highcharts.chart("chartContainerYearly", {
     },
 
     subtitle: {
-        text: "Amount of harmful pollutant 2.5 in the districts of Bangladesh",
+        text: "",
     },
 
     yAxis: {
@@ -768,7 +779,7 @@ Highcharts.chart("chartContainerYearly", {
 
     xAxis: {
         accessibility: {
-            rangeDescription: "Range: 2017 to 2021",
+            rangeDescription: "",
         },
     },
 
@@ -782,8 +793,7 @@ Highcharts.chart("chartContainerYearly", {
         series: {
             label: {
                 connectorAllowed: false,
-            },
-            pointStart: 2017,
+            }
         },
     },
 
@@ -844,7 +854,7 @@ Highcharts.chart("chartContainerDaily", {
     },
 
     subtitle: {
-        text: "Amount of harmful pollutant 2.5 in the districts of Bangladesh",
+        text: "",
     },
 
     yAxis: {
@@ -912,7 +922,7 @@ Highcharts.chart("bpContainer1", {
     },
 
     title: {
-        text: "Box plot of station-wise recorded PM2.5 concentration",
+        text: "",
     },
 
     xAxis: {

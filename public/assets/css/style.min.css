@@ -172,8 +172,11 @@ section {
     padding-top: 20px;
 
   }
-
-
+  @media screen and (max-width: 960px){
+  .container-div{
+      display:flex;
+  }
+  }
   @keyframes a1 {
     from {box-shadow:0 5px 15px 0 rgba(194, 177, 177, 0.5)}
     to {box-shadow: 0 5px 15px 0 rgba(26, 26, 27, 0.24)}

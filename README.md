@@ -9,6 +9,7 @@ At a glance
 * User Authentication for access to admin panel 
 * Database shown in a user friendly table, where you can perform CRUD operations
 * The data that is shown in the charts can be viewed in the "Charts-Table" sidebar option
+* Data queried from Database using Laravel Query Builder and SQL
 
 
 

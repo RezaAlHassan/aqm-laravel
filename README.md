@@ -11,6 +11,14 @@ At a glance
 * The data that is shown in the charts can be viewed in the "Charts-Table" sidebar option
 * Data queried from Database using Laravel Query Builder and SQL
 
+### Installation
+1. Unzip the downloaded archive
+2. Copy and paste **aqm** folder in your htdocs folder
+3. In your terminal run `composer install`
+4. Copy `.env.example` to `.env` and updated the configurations (mainly the database configuration)
+5. In your terminal run `php artisan key:generate`
+6. Run `php artisan migrate --seed` to create the database tables and seed the roles and users tables
+
 ### Database
 
 #### Stationwise
@@ -51,3 +59,6 @@ The amount of main pollutant in Bangladesh, known as PM2.5, is collected for eac
 The amount of main pollutant in Bangladesh, known as PM2.5, is collected for each day every year in the seven districts of Bangladesh in the database. The daily data for each district is queried using SQL commands and query builder functions. The data is then shown in the graph using a line graph, y axis being average PM2.5 and x axis representing the districts.
 
 #### Box Plots : Stationwise, Monthly, by Season
+
+
+

@@ -11,6 +11,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>AQM</title>
+    <link rel="icon" href="../assets/img/logo-ct.png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -54,6 +55,7 @@
         <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_izy5ndvp.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px;"  loop  autoplay></lottie-player>
     </nav>
     
+    <div style="background-image: url('../assets/img/clouds.jpg');">
     <div class="jumbotron d-flex align-items-center" >
         <div class="container text-center">
             <h2 id="subtitle" class="display-1 mb-4">AQM measures air quality in real time for all districts in
@@ -77,6 +79,7 @@
             <img src="../assets/img/obj_triangle.png" alt="">
         </div>
     </div>
+</div>
 
 
 

@@ -1,4 +1,4 @@
-# AQM : Air Quality Monitoring [Laravel]
+# AQM : Air Quality Monitoring [Laravel & SQL(Query Builder) ]
 ## An air quality monitoring software that collects everyday air quality data, computes it and shows it in user friendly charts and a dashboard. 
 
 At a glance 

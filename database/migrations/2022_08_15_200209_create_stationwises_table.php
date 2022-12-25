@@ -21,7 +21,8 @@ return new class extends Migration
             $table->string('season');
             $table->double('pm',5,2);
             $table->double('aqi',5,2);
-            $table->timestamps()->useCurrent();
+            //$table->timestamp()->useCurrent();
+           // $table->timestamps()->useCurrent();
         });
     }
 

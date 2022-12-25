@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 18, 2022 at 07:19 PM
+-- Generation Time: Sep 14, 2022 at 05:51 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -20,81 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `aqm_db`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `bpm_fours`
---
-
-CREATE TABLE `bpm_fours` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `month` int(11) NOT NULL,
-  `maximum` double(5,2) NOT NULL,
-  `upper` double(5,2) NOT NULL,
-  `median` double(5,2) NOT NULL,
-  `lower` double(5,2) NOT NULL,
-  `minimum` double(5,2) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `bpse_fives`
---
-
-CREATE TABLE `bpse_fives` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `season` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `maximum` double(5,2) NOT NULL,
-  `upper` double(5,2) NOT NULL,
-  `median` double(5,2) NOT NULL,
-  `lower` double(5,2) NOT NULL,
-  `minimum` double(5,2) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `bpst_threes`
---
-
-CREATE TABLE `bpst_threes` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `station` int(11) NOT NULL,
-  `maximum` double(5,2) NOT NULL,
-  `upper` double(5,2) NOT NULL,
-  `median` double(5,2) NOT NULL,
-  `lower` double(5,2) NOT NULL,
-  `minimum` double(5,2) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `bylc_twos`
---
-
-CREATE TABLE `bylc_twos` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `year` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `dhaka` double(5,2) NOT NULL,
-  `rajshahi` double(5,2) NOT NULL,
-  `sylhet` double(5,2) NOT NULL,
-  `rangpur` double(5,2) NOT NULL,
-  `chittagong` double(5,2) NOT NULL,
-  `khulna` double(5,2) NOT NULL,
-  `barishal` double(5,2) NOT NULL,
-  `average` double(5,2) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -143,21 +68,6 @@ CREATE TABLE `failed_jobs` (
   `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `mdlc_ones`
---
-
-CREATE TABLE `mdlc_ones` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `district` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `aqi` double(5,2) NOT NULL,
-  `pm` double(5,2) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -243,7 +153,6 @@ CREATE TABLE `stationwises` (
 
 INSERT INTO `stationwises` (`id`, `district`, `station`, `organization`, `season`, `pm`, `aqi`, `created_at`, `updated_at`) VALUES
 (1, 'Dhaka', 1, 'PurpleAir', 'Winter', 120.00, 134.00, '2021-08-15 20:58:02', '2021-08-15 20:58:02'),
-(2, 'Dhaka', 2, 'White Rose', 'Summer', 80.00, 134.00, '2020-08-08 21:03:26', '2020-08-08 21:03:26'),
 (3, 'Dhaka', 3, 'PurpleAir', 'Spring', 85.00, 140.00, '2017-02-15 21:04:45', '2017-02-16 21:04:45'),
 (4, 'Rajshahi', 4, 'OpenEnv', 'Winter', 13.00, 20.00, '2018-01-08 21:07:13', '2018-01-08 21:07:13'),
 (5, 'Rangpur', 5, 'OpenEnv', 'Autumn', 50.00, 40.00, '2021-10-11 21:09:23', '2021-10-11 21:09:23'),
@@ -304,7 +213,9 @@ INSERT INTO `stationwises` (`id`, `district`, `station`, `organization`, `season
 (62, 'Barishal', 14, 'OpenEnv', 'Spring', 40.00, 55.00, '2021-03-22 16:54:13', '2021-03-22 16:54:13'),
 (63, 'Chittagong', 15, 'EPA', 'Summer', 60.00, 70.00, '2021-08-22 16:54:13', '2021-08-22 16:54:13'),
 (64, 'Khulna', 15, 'AirAQ', 'Summer', 22.00, 33.00, '2018-07-09 16:56:20', '2018-07-09 16:56:20'),
-(65, 'Barishal', 19, 'PurpleAir', 'Summer', 47.20, 66.00, '2018-09-09 16:56:20', '2018-09-09 16:56:20');
+(65, 'Barishal', 19, 'PurpleAir', 'Summer', 47.20, 66.00, '2018-09-09 16:56:20', '2018-09-09 16:56:20'),
+(68, 'Dhaka', 8, 'EPA', 'Summer', 120.00, 154.00, '2022-08-28 11:09:48', '2022-08-28 11:09:48'),
+(70, 'Dhaka', 10, 'EPA', 'Summer', 120.00, 154.00, '2022-09-12 15:29:04', '2022-09-12 15:29:04');
 
 -- --------------------------------------------------------
 
@@ -337,30 +248,6 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `phone`, `location`, `ab
 --
 
 --
--- Indexes for table `bpm_fours`
---
-ALTER TABLE `bpm_fours`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `bpse_fives`
---
-ALTER TABLE `bpse_fives`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `bpst_threes`
---
-ALTER TABLE `bpst_threes`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `bylc_twos`
---
-ALTER TABLE `bylc_twos`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `dashboards`
 --
 ALTER TABLE `dashboards`
@@ -372,12 +259,6 @@ ALTER TABLE `dashboards`
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
-
---
--- Indexes for table `mdlc_ones`
---
-ALTER TABLE `mdlc_ones`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `migrations`
@@ -417,30 +298,6 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `bpm_fours`
---
-ALTER TABLE `bpm_fours`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `bpse_fives`
---
-ALTER TABLE `bpse_fives`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `bpst_threes`
---
-ALTER TABLE `bpst_threes`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `bylc_twos`
---
-ALTER TABLE `bylc_twos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `dashboards`
 --
 ALTER TABLE `dashboards`
@@ -450,12 +307,6 @@ ALTER TABLE `dashboards`
 -- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `mdlc_ones`
---
-ALTER TABLE `mdlc_ones`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
@@ -474,7 +325,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `stationwises`
 --
 ALTER TABLE `stationwises`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
 -- AUTO_INCREMENT for table `users`

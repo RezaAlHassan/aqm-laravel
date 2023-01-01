@@ -53,6 +53,8 @@ At a glance
 
 ### Charts (Also Viewable as tables in Admin Panel)
 
+![aqm admin chart table](https://user-images.githubusercontent.com/24864973/210168075-7e337ca6-0ca9-48f4-8eac-a7546a16a6cb.png)
+
 #### Map
 The daily air quality index (AQI), which represnts the quality of air incliding pollutants today, is shown for all districts
 

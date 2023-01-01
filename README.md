@@ -66,6 +66,8 @@ The amount of main pollutant in Bangladesh, known as PM2.5, is collected for eac
 #### Bar Chart
 The amount of main pollutant in Bangladesh, known as PM2.5, is collected for each day every year in the seven districts of Bangladesh in the database. The data for each year is combined and averaged using SQL commands and query builder functions. So the data shows the yearly average pm2.5 for each year. The data is then shown in the graph using a line graph where, y axis being average PM2.5 and x axis representing the years.
 
+![aqm home 4 barchart](https://user-images.githubusercontent.com/24864973/210168021-ae3346e4-639a-47b2-b7c6-caec53e99811.png)
+
 #### Box Plots
 The amount of main pollutant in Bangladesh, known as PM2.5, is collected for each day every year in the seven districts of Bangladesh in the database. The average, lower quartile, upper quatrile, minimum and maximum of the data is shown in yearly and seasonal box plots.
 

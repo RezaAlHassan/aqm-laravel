@@ -1,6 +1,8 @@
 # AQM : Air Quality Monitoring [Laravel 9, SQL & Query Builder]
 ## An air quality monitoring software that collects everyday air quality data, computes it and shows it in user friendly charts and a dashboard. 
 
+![aqm home 1](https://user-images.githubusercontent.com/24864973/210167997-b56677bd-f06f-4442-8030-e649af3b229c.png)
+
 At a glance 
 * 5 Pages: Home (../), Admin Login (../login), Admin Dashboard (../dashboard), Charts-Tables (../chart-tables), Stationwise-Table (../stationwise-table) + 2 other forms (Create and Edit)
 * 7 modfified charts, initially collected from Highcharts
@@ -24,6 +26,9 @@ At a glance
 ### Database
 
 #### Stationwise
+
+![aqm admin table](https://user-images.githubusercontent.com/24864973/210167991-876999e8-b87c-4e9e-9267-e7c23934ba17.png)
+
 * id
 * created_at 
 * aqi - Air Quality Data including all pollutants
@@ -34,6 +39,9 @@ At a glance
 * organization - Organization which recorded the data
 
 #### Dashboard
+
+![aqm overview](https://user-images.githubusercontent.com/24864973/210167953-e3389cd3-5551-4680-941c-e4304c41915e.png)
+
  * id
  * district
  * temperature
@@ -48,19 +56,25 @@ At a glance
 #### Map
 The daily air quality index (AQI), which represnts the quality of air incliding pollutants today, is shown for all districts
 
+![aqm home 3 map](https://user-images.githubusercontent.com/24864973/210167840-b455e179-a859-44c1-8b35-92fa2788bbe1.png)
+
 #### Yearly Line Chart
 The amount of main pollutant in Bangladesh, known as PM2.5, is collected for each day every year in the seven districts of Bangladesh in the database. The data for each district, each year, is combined and averaged using SQL commands and query builder functions. So the data shows the yearly average data for each year, for each district. The data is then shown in the graph using a line graph, y axis being average PM2.5 and x axis representing the years.
 
-#### Bar Chart
-The amount of main pollutant in Bangladesh, known as PM2.5, is collected for each day every year in the seven districts of Bangladesh in the database. The data for each year is combined and averaged using SQL commands and query builder functions. So the data shows the yearly average pm2.5 for each year. The data is then shown in the graph using a line graph where, y axis being average PM2.5 and x axis representing the years.
+![yearlulc](https://user-images.githubusercontent.com/24864973/210167847-422ea341-00d2-4f15-81d9-1f2ff15987b0.png)
 
 #### Bar Chart
 The amount of main pollutant in Bangladesh, known as PM2.5, is collected for each day every year in the seven districts of Bangladesh in the database. The data for each year is combined and averaged using SQL commands and query builder functions. So the data shows the yearly average pm2.5 for each year. The data is then shown in the graph using a line graph where, y axis being average PM2.5 and x axis representing the years.
+
+#### Box Plots
+The amount of main pollutant in Bangladesh, known as PM2.5, is collected for each day every year in the seven districts of Bangladesh in the database. The average, lower quartile, upper quatrile, minimum and maximum of the data is shown in yearly and seasonal box plots.
+
+![bp](https://user-images.githubusercontent.com/24864973/210167903-899edde4-8ee4-4499-8365-93910f9aa328.png)
 
 #### Daily Line Chart
 The amount of main pollutant in Bangladesh, known as PM2.5, is collected for each day every year in the seven districts of Bangladesh in the database. The daily data for each district is queried using SQL commands and query builder functions. The data is then shown in the graph using a line graph, y axis being average PM2.5 and x axis representing the districts.
 
-#### Box Plots : Stationwise, Monthly, by Season
+
 
 
 

@@ -13,7 +13,7 @@ At a glance
 * The data that is shown in the charts can be viewed in the "Charts-Table" sidebar option
 * Data queried from Database using Laravel Query Builder and SQL
 
-### Installation
+### Installation/Running locally
 1. Unzip the downloaded archive
 2. Copy and paste **aqm** folder in your htdocs folder
 3. In your terminal run `composer install`
